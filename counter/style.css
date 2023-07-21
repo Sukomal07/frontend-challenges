@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result{
+    font-size: 3rem;
+}
+.buttons{
+    display:flex ;
+    padding: 1rem;
+    gap: 20px;
+}
+button{
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.change{
+    font-size: 20px;
+    margin: 13px;
+}
+input{
+    width: 3rem;
+    height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+}
