@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi tying</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            height: 100vh;
+            align-items: center;
+        }
+        span{
+            position: relative;
+            font-size: 60px;
+            font-weight: 600;
+        }
+        .first-text{
+            color: #127dbf;
+        }
+        .second-text::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: white;
+            border-left: 2px solid #32043d;
+            animation: animate 4s steps(10) infinite;
+        }
+
+        @keyframes animate {
+            40%,
+            60%{
+                left: calc(100% + 4px);
+            }
+            100%{
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="first-text">I'm a &nbsp;</span>
+        <span class="second-text"></span>
+    </div>
+    <script>
+        const text = document.querySelector('.second-text')
+
+        function textLoad(){
+            setTimeout(()=>{
+                text.textContent = 'Student'
+            },0)
+            setTimeout(()=>{
+                text.textContent = 'Gamer'
+            },4000)
+            setTimeout(()=>{
+                text.textContent = 'Developer'
+            },8000)
+        }
+        textLoad()
+        setInterval(textLoad, 12000)
+    </script>
+</body>
+</html>
