@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light and dark mode</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="checkbox">
+            Dark Mode: <input type="checkbox"  id="themeSwitch">
+        </div>
+        <h1>Click on check box to change entire page color</h1>
+        <div class="checkbox">
+            Contained dark mode: <input type="checkbox"  id="innerSwitch">
+        </div>
+        <div id="box">
+            <h1>To change the box color click on check box</h1>
+        </div>
+    </div>
+    <script>
+        const themeSwitch = document.getElementById('themeSwitch')
+        const innerSwitch = document.getElementById('innerSwitch')
+        const box = document.getElementById('box')
+
+        themeSwitch.addEventListener('change', function(){
+            if(themeSwitch.checked){
+                document.body.classList.add('dark')
+                innerSwitch.checked = true
+            }else{
+                document.body.classList.remove('dark')
+                innerSwitch.checked = false
+            }
+        })
+        innerSwitch.addEventListener('change',function(){
+            if(innerSwitch.checked){
+                box.style.backgroundColor = 'black'
+                box.style.color = 'white'
+            }else{
+                box.style.backgroundColor = 'white'
+                box.style.color = 'black'
+            }
+        })
+        
+
+    </script>
+</body>
+</html>
