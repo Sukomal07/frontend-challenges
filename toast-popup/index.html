@@ -28,22 +28,22 @@
             <input type="text" value="This is a toast message" name="message" id="message"
                 placeholder="Enter toast message" required>
             <label for="duration">
-                Duration
                 <input type="range" name="duration" id="duration" value="5">
             </label>
             <button id="show-toast" type="button">Show Toast</button>
         </form>
     </div>
-    <div class="toast-container left-top">A</div>
-    <div class="toast-container left-down">B</div>
-    <div class="toast-container right-top">C</div>
-    <div class="toast-container right-down">D</div>
-    <div id="toast-template">
+    <div class="toast-container left-top"></div>
+    <div class="toast-container left-down"></div>
+    <div class="toast-container right-top"></div>
+    <div class="toast-container right-down"></div>
+    <template id="toast-template">
         <div class="toast">
-            <span class="toast-message">this is a message</span>
+            <span class="toast-message"></span>
             <button class="remove">&#x2715;</button>
         </div>
-    </div>
+    </template>
+    <script src="./script.js"></script>
 </body>
 
 </html>

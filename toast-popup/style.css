@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #ccc;
+}
 
 .container {
   margin: auto;
@@ -31,7 +34,7 @@ select {
   border: 2px solid #ff00db;
 }
 
-input {
+#message {
   padding: 10px;
   font-size: 16px;
   font-weight: 500;
@@ -40,25 +43,156 @@ input {
   border: 2px solid #ff00db;
 }
 
-label {
+/* label {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
+} */
+#duration {
+  width: 100%;
 }
 
 #show-toast {
   padding: 10px;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: #5ad8dc;
-  border: 2px solid #4000ff;
+  background-color: cyan;
+  border: none;
+}
+
+#show-toast:disabled {
+  cursor: not-allowed;
 }
 
 .toast-container {
   position: fixed;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.left-top {
+  left: 1rem;
+  top: 1rem;
+}
+.left-down {
+  left: 1rem;
+  bottom: 1rem;
+}
+.right-top {
+  right: 1rem;
+  top: 1rem;
+}
+.right-down {
+  right: 1rem;
+  bottom: 1rem;
+}
+.toast {
+  padding: 0.5em;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+}
+.toast.success {
+  background-color: #00b300;
+}
+
+.toast.error {
+  background-color: #ff0000;
+}
+
+.toast.warning {
+  background-color: #ffa500;
+}
+
+.toast.info {
+  background-color: lightyellow;
+}
+.toast::before {
+  min-width: 1rem;
+  padding: 0.1em 0.5em;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+.toast.success::before {
+  content: "✓";
+}
+
+.toast.error::before {
+  content: "✗";
+}
+
+.toast.warning::before {
+  content: "⚠";
+}
+
+.toast.info::before {
+  content: "ⓘ";
+}
+
+.toast-message {
+  font-size: 20px;
+}
+.remove {
+  all: unset;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.left-top .toast,
+.left-down .toast {
+  animation: appearFromLeft 0.1s ease-in forwards;
+}
+
+.left-top .toast.fade-out-left,
+.left-down .toast.fade-out-left {
+  animation: fadeOutToLeft 0.1s ease-in forwards;
+}
+@keyframes appearFromLeft {
+  0% {
+    transform: translate(-200%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeOutToLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-200%, 0);
+  }
+}
+
+.right-top .toast,
+.right-down .toast {
+  animation: appearFromRight 0.1s ease-in forwards;
+}
+
+.right-top .toast.fade-out-right,
+.right-down .toast.fade-out-right {
+  animation: fadeOutToRight 0.1s ease-in forwards;
+}
+
+@keyframes appearFromRight {
+  0% {
+    transform: translate(200%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeOutToRight {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(200%, 0);
+  }
 }
