@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+.shape {
+  border: 1px solid black;
+  width: 250px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  background-color: aqua;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: darkolivegreen;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 150px solid gold;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+}
+.parallelogram {
+  width: 150px;
+  height: 150px;
+  background-color: blueviolet;
+  transform: skewX(-30deg);
+}
+.diamond {
+  width: 100px;
+  height: 100px;
+  background-color: greenyellow;
+  transform: rotate(45deg);
+  margin-top: 20px;
+}
+.egg {
+  width: 100px;
+  height: 150px;
+  border: 3px solid black;
+  border-radius: 50% 50% 50% 50%;
+}
+.star {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: 60px;
+  color: red;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellowgreen;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
