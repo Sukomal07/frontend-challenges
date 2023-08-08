@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password strength</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <input type="text" placeholder="Enter Password" autofocus id="input">
+        </div>
+        <div class="indicators">
+            <span id="lc">lowercase</span>
+            <span id="uc">uppercase</span>
+            <span id="num">number</span>
+            <span id="sym">symbol</span>
+        </div>
+        <div class="progressbar-container">
+            <div class="progressbar" id="progressbar"></div>
+        </div>
+        <p>Password has <strong id="chars">0</strong> character</p>
+        <p>Your password is <strong id="strength">Weak</strong></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
