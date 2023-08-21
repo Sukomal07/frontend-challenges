@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.progress-bar {
+  width: 100%;
+  background-color: #ccc;
+  height: 10px;
+  margin: 40px 0;
+}
+.progress {
+  width: 0%;
+  background-color: blue;
+  height: 10px;
+}
+.buttons {
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+.buttons > button {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.buttons > button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
