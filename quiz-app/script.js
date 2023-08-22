@@ -29,7 +29,7 @@ async function fetchQuiz() {
         quizContainer.style.display = 'block'
         loading.style.display = "none"
     } catch (error) {
-        console.log("Error fatching quiz data", error);
+        alert("Error fatching quiz data", error);
         loading.style.display = "block"
         quizContainer.style.display = 'none'
     }
