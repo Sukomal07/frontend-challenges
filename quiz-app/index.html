@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Quiz</h1>
+        <div class="alert-container">
+            <span class="correct-alert" id="correct-alert">Good job</span>
+            <span class="wrong-alert" id="wrong-alert">Sorry! Try again</span>
+        </div>
+        <div class="quiz-container">
+            <h1 class="question" id="question"></h1>
+            <hr>
+            <form class="submitForm" id="submitForm">
+                <div class="multiple-container">
+                    <input type="radio" name="choices" id="choice1" required>
+                    <label for="choice1" id="choice-1"></label>
+                </div>
+                <div class="multiple-container">
+                    <input type="radio" name="choices" id="choice2" required>
+                    <label for="choice2" id="choice-2"></label>
+                </div>
+                <div class="multiple-container">
+                    <input type="radio" name="choices" id="choice3" required>
+                    <label for="choice3" id="choice-3"></label>
+                </div>
+                <div class="multiple-container">
+                    <input type="radio" name="choices" id="choice4" required>
+                    <label for="choice4" id="choice-4"></label>
+                </div>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+        <div class="loading"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
